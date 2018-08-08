@@ -29,15 +29,9 @@ function isAllTrue(array, fn) {
 		catch (error) { console.log(error.message); }
 	} else {
 		for (let i = 0; i < array.length; i++) {
-
 			(fn(array[i]) == false) ? tmpArg_1++ : tmpArg_2++;
-
-			if (array.length == tmpArg_1) { 
-				return false; 
-			}
-			else if (tmpArg_2 > 0) { 
-				return true; 
-			}
+			if (array.length == tmpArg_1) { return false; }
+			else if (tmpArg_2 > 0) { return true; }
 		}
 	}
 }
